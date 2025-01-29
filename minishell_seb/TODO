@@ -1,0 +1,14 @@
+Fix le parsing quand <machin >truc
+
+Rajouter un token pour les dossier
+
+Bien retourner le status dans tous les cacas
+
+Fix les leaks et autre zinzoleries
+
+Normer
+
+valgrind -s --leak-check=full --show-leak-kinds=all --track-fds=yes --trace-children=yes --suppressions=valgrind.txt ./minishell
+
+
+echo hi >non oui
