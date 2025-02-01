@@ -4,28 +4,33 @@
 
 int	main(int ac, char **av, char **env)
 {
-	//t_data	data;
-	char	*input_line;
+	t_node	*list;
+	char	*cmds_brut;
+
 	(void)env;
 	(void)av; // utilisation de av pour pourvoir compiler sans erreurs.
 	if (ac == 1)
 	{
-		// line pour initialiser  je sais pas quoi ecnore (structure?)
 		while (1)
 		{
-			// fonction signal_des_touches? -> ctrl+c/ctrl+d
-			input_line = readline("minishell :");
-			if (!input_line)
+			ft_signals(); // fonction gestion signal_des_touches? -> ctrl+c/ctrl+d/crtl+'\'
+			cmds_brut = readline("minishell :");
+			if (!cmds_brut)
 			{
-				errno = //chercher code erreur aucune valeur d'entree
-				perror("error main ");
+				if (errno)
+					perror("error main ");
+				else
+					ft_printf("Exit minishell\n");	// en cas de ctrl+D quand on est entrain de remplir le heredoc. je pense devoir gerer le crtl ailleurs.
 			}
+			else
+				if (ft_checks_cmds(&cmds_brut))		// controle de la syntaxe (l'ordre des elements est il correction selon leurs types? 
+					ft_list_manag(&cmds_brut);		// types -> operateurs de redirection ( |, <, <<, >, >>) ou cmds ou arguments de la cmds.
 		}
 		
 
 
 
-		free(input_line);
+		free(cmds_brut);
 		ft_printf("ok\n"); // savoir si tout s'est bien passe
 	}
 	else

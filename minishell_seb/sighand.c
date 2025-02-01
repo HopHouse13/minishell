@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sighand.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: swendum <swendum@student.42.fr>            +#+  +:+       +#+        */
+/*   By: pbret <pbret@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 19:51:45 by swendum           #+#    #+#             */
-/*   Updated: 2025/01/21 23:32:07 by swendum          ###   ########.fr       */
+/*   Updated: 2025/02/01 18:47:54 by pbret            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,6 @@ void	do_nothing(int signo)
 
 void	setup_signal_handlers(void)
 {
-	signal(SIGINT, handle_signal);
+	signal(S	NT, handle_signal);
 	signal(SIGQUIT, handle_signal);
 }

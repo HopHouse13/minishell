@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+        */
+/*   By: pbret <pbret@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 19:24:09 by swendum           #+#    #+#             */
-/*   Updated: 2025/01/29 15:45:49 by ubuntu           ###   ########.fr       */
+/*   Updated: 2025/02/01 18:47:50 by pbret            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	*get_real_path(char **split_cmd, char *path)
 	}
 	return (free_tab(split_path), NULL);
 }
-
+	
 void	do_redirection(t_data *data, int i, int fd, int dup)
 {
 	if (data->token[i] == 'I')
