@@ -14,6 +14,7 @@ int	main(int ac, char **av, char **env)
 		while (1)
 		{
 			ft_signals(); // fonction gestion signal_des_touches? -> ctrl+c/ctrl+d/crtl+'\'
+			ft_make_input();
 			cmds_brut = readline("minishell :");
 			if (!cmds_brut)
 			{
