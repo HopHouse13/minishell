@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pbret <pbret@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 19:16:25 by ubuntu            #+#    #+#             */
-/*   Updated: 2025/02/01 20:33:34 by pbret            ###   ########.fr       */
+/*   Updated: 2025/02/05 16:44:07 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,19 @@
 # define CYAN "\033[36m"
 # define WHITE "\033[37m"
 
-typedef struct s_node
+typedef struct s_list
 {
 	char			*cmds;
 	char			tokens;
-	char			**env;
-	struct s_node	*prev;
-	struct s_node	*next;
-}					t_node;
+	struct s_list	*prev;
+	struct s_list	*next;
+}					t_list;
 
+typedef struct s_minishell
+{
+	t_list			*cmds_list;
+	char			**env;
+}					t_minishell;
 
 int main(int ac, char **av, char **env);
 

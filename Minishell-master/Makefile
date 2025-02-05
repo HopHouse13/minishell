@@ -37,7 +37,7 @@ SRCS		=	srcs/main.c \
 				srcs/builtin/env.c \
 				srcs/builtin/export/handler.c \
 				srcs/builtin/export/print.c \
-				srcs/builtin/exit.c \
+				srcs/builtin/exit.c
 
 OBJS		=	$(SRCS:.c=.o)
 
