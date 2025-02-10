@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   manag_free.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pbret <pbret@student.42.fr>                +#+  +:+       +#+        */
+/*   By: arotondo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/01 20:23:29 by pbret             #+#    #+#             */
-/*   Updated: 2025/02/03 15:48:27 by pbret            ###   ########.fr       */
+/*   Created: 2024/05/16 15:49:10 by arotondo          #+#    #+#             */
+/*   Updated: 2024/05/25 17:44:27 by arotondo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../includes/minishell.h"
-
-void	ft_master_free(t_node *list)
+int	ft_isdigit(int c)
 {
-	
+	if (c > 47 && c < 58)
+		return (1);
+	else
+		return (0);
 }

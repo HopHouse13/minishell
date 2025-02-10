@@ -1,15 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   manag_lexer.c                                      :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+        */
+/*   By: arotondo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/06 16:25:46 by ubuntu            #+#    #+#             */
-/*   Updated: 2025/02/06 16:26:13 by ubuntu           ###   ########.fr       */
+/*   Created: 2024/05/21 17:41:12 by arotondo          #+#    #+#             */
+/*   Updated: 2024/05/24 15:45:35 by arotondo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/minishell.h"
+#include "libft.h"
 
-ft_check_syntaxe(list); // a faire
+int	ft_toupper(int c)
+{
+	if (c > 96 && c < 123)
+		c -= 32;
+	return (c);
+}
+/*
+int	main(void)
+{
+	printf("%d\n", ft_toupper('w'));
+	printf("%d\n", toupper('w'));
+	return (0);
+}*/
