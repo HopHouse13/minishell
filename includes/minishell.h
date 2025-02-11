@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pbret <pbret@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 19:16:25 by ubuntu            #+#    #+#             */
-/*   Updated: 2025/02/10 19:27:16 by pbret            ###   ########.fr       */
+/*   Updated: 2025/02/11 21:06:26 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,20 +41,10 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
-typedef struct s_parser
-{
-
-}					t_parser;
-
 typedef struct s_lexer
 {
 
 }					t_lexer;
-
-typedef struct s_exec
-{
-
-}					t_exec;
 
 typedef struct s_mshell
 {
@@ -62,9 +52,7 @@ typedef struct s_mshell
 	t_list			*cmds_list;
 	char			**env;
 	char			**path;
-	t_parser		parser;
 	t_lexer			lexer;
-	t_exec			exec;
 }					t_mshell;
 
 int main(int ac, char **av, char **env);
